@@ -11,7 +11,7 @@ namespace FunctionAppServiceBusQueueTrigger
         //When a new message is added to the queue, the function is invoked
         //ServiceBusConnectionString should be a key in the app settings of the function app
         /*  "Values": {
-            "ServiceBusConnectionString": ConnectionString
+            "ServiceBusConnectionString": "ConnectionString"
         */
         [FunctionName("Function1")]
         public void Run([ServiceBusTrigger("mynewqueue", Connection = "ServiceBusConnectionString")]string myQueueItem, ILogger log)
